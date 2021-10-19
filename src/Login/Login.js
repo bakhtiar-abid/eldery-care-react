@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../hooks/useAuth";
+import "./Login.css";
 import {
    getAuth,
    updateProfile,
@@ -113,100 +114,115 @@ const Login = () => {
             // ..
          });
    };
-   const bgImage = {
-      backgroundImage: "../../src/images/Older-peoples-banner.jpg",
-      height: "100vh",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-   };
+
    return (
-      <div className="my-5 mx-5 container" style={bgImage}>
-         <form onSubmit={handleRegistration}>
-            <h3 className="text-primary">
-               Please {isLogin ? "Login" : "Register"}{" "}
-            </h3>
-            {!isLogin && (
-               <div className="row mb-3">
-                  <label for="inputAddress" className="col-sm-2 col-form-label">
-                     Name:
-                  </label>
-                  <div className="col-sm-10">
-                     <input
-                        onBlur={hanldeNameChange}
-                        type="text"
-                        class="form-control"
-                        id="inputAddress"
-                        placeholder="Your Name"
-                     />
-                  </div>
+      <div className="row overflow-hidden">
+         <div className="col-lg-7  bg-image overflow-hidden"></div>
+         <div className="col-lg-5 ">
+            <div className=" my-5 ">
+               <div className="my-5 mx-5 ">
+                  <form onSubmit={handleRegistration}>
+                     <h3 className="text-success ">
+                        Please {isLogin ? "Login" : "Register"}{" "}
+                     </h3>
+                     {!isLogin && (
+                        <div className="row mb-3">
+                           <label
+                              for="inputAddress"
+                              className="col-sm-2 col-form-label text-white"
+                           >
+                              Name:
+                           </label>
+                           <div className="col-sm-10 overflow-hidden">
+                              <input
+                                 onBlur={hanldeNameChange}
+                                 type="text"
+                                 class="form-control"
+                                 id="inputAddress"
+                                 placeholder="Your Name"
+                              />
+                           </div>
 
+                           <br />
+                        </div>
+                     )}
+                     <div className="row mb-3">
+                        <label
+                           htmlFor="inputEmail3"
+                           className="col-sm-2 col-form-label text-white"
+                        >
+                           Email
+                        </label>
+                        <div className="col-sm-10">
+                           <input
+                              onBlur={handleEmailChange}
+                              type="email"
+                              className="form-control"
+                              id="inputEmail3"
+                              required
+                           />
+                        </div>
+                     </div>
+                     <div className="row mb-3">
+                        <label
+                           htmlFor="inputPassword3"
+                           className="col-sm-2 col-form-label text-white"
+                        >
+                           Password
+                        </label>
+                        <div className="col-sm-10">
+                           <input
+                              onBlur={hanldePasswordChange}
+                              type="password"
+                              className="form-control"
+                              id="inputPassword3"
+                              required
+                           />
+                        </div>
+                     </div>
+
+                     <div className="row mb-3">
+                        <div className="col-sm-10 offset-sm-2">
+                           <div className="form-check">
+                              <input
+                                 onChange={toggleLogin}
+                                 className="form-check-input"
+                                 type="checkbox"
+                                 id="gridCheck1"
+                              />
+                              <label
+                                 className="form-check-label"
+                                 htmlFor="gridCheck1"
+                              >
+                                 Already Registered?
+                              </label>
+                           </div>
+                        </div>
+                     </div>
+                     <div className="row- mb-3 text-danger"> {error} </div>
+                     <button type="submit" className="btn btn-success">
+                        {isLogin ? "Login" : "Register"}
+                     </button>
+                     <button
+                        type="button"
+                        onClick={handleResetPassword}
+                        class="btn btn-secondary btn-sm ms-3 "
+                     >
+                        Reset Password
+                     </button>
+                  </form>
                   <br />
-               </div>
-            )}
-            <div className="row mb-3">
-               <label htmlFor="inputEmail3" className="col-sm-2 col-form-label">
-                  Email
-               </label>
-               <div className="col-sm-10">
-                  <input
-                     onBlur={handleEmailChange}
-                     type="email"
-                     className="form-control"
-                     id="inputEmail3"
-                     required
-                  />
+                  <p>Sign-In Using Google</p>
+                  <button
+                     className="btn btn-warning"
+                     onClick={handleGoogleLogin}
+                  >
+                     {" "}
+                     Google Sign-In{" "}
+                  </button>
                </div>
             </div>
-            <div className="row mb-3">
-               <label
-                  htmlFor="inputPassword3"
-                  className="col-sm-2 col-form-label"
-               >
-                  Password
-               </label>
-               <div className="col-sm-10">
-                  <input
-                     onBlur={hanldePasswordChange}
-                     type="password"
-                     className="form-control"
-                     id="inputPassword3"
-                     required
-                  />
-               </div>
-            </div>
-
-            <div className="row mb-3">
-               <div className="col-sm-10 offset-sm-2">
-                  <div className="form-check">
-                     <input
-                        onChange={toggleLogin}
-                        className="form-check-input"
-                        type="checkbox"
-                        id="gridCheck1"
-                     />
-                     <label className="form-check-label" htmlFor="gridCheck1">
-                        Already Registered?
-                     </label>
-                  </div>
-               </div>
-            </div>
-            <div className="row- mb-3 text-danger"> {error} </div>
-            <button type="submit" className="btn btn-primary">
-               {isLogin ? "Login" : "Register"}
-            </button>
-            <button
-               type="button"
-               onClick={handleResetPassword}
-               class="btn btn-secondary btn-sm ms-3 "
-            >
-               Reset Password
-            </button>
-         </form>
-         <br /> <br /> <br />
-         <div>------------------------------------------------------------</div>
-         <br /> <br /> <br />
-         <button onClick={handleGoogleLogin}> Google Sign-In </button>
+         </div>
       </div>
    );
 };
