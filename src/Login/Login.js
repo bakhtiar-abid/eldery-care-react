@@ -116,9 +116,8 @@ const Login = () => {
    };
 
    return (
-      <div className="row overflow-hidden">
-         <div className="col-lg-7  bg-image overflow-hidden"></div>
-         <div className="col-lg-5 ">
+      <div>
+         <div>
             <div className=" my-5 ">
                <div className="my-5 mx-5 ">
                   <form onSubmit={handleRegistration}>
@@ -129,7 +128,7 @@ const Login = () => {
                         <div className="row mb-3">
                            <label
                               for="inputAddress"
-                              className="col-sm-2 col-form-label text-white"
+                              className="col-sm-2 col-form-label "
                            >
                               Name:
                            </label>
@@ -137,7 +136,7 @@ const Login = () => {
                               <input
                                  onBlur={hanldeNameChange}
                                  type="text"
-                                 class="form-control"
+                                 className="form-control w-50"
                                  id="inputAddress"
                                  placeholder="Your Name"
                               />
@@ -149,33 +148,35 @@ const Login = () => {
                      <div className="row mb-3">
                         <label
                            htmlFor="inputEmail3"
-                           className="col-sm-2 col-form-label text-white"
+                           className="col-sm-2 col-form-label "
                         >
-                           Email
+                           Email:
                         </label>
                         <div className="col-sm-10">
                            <input
                               onBlur={handleEmailChange}
                               type="email"
-                              className="form-control"
+                              className="form-control  w-50"
                               id="inputEmail3"
                               required
+                              placeholder="Your Email"
                            />
                         </div>
                      </div>
                      <div className="row mb-3">
                         <label
                            htmlFor="inputPassword3"
-                           className="col-sm-2 col-form-label text-white"
+                           className="col-sm-2 col-form-label"
                         >
-                           Password
+                           Password:
                         </label>
                         <div className="col-sm-10">
                            <input
                               onBlur={hanldePasswordChange}
                               type="password"
-                              className="form-control"
+                              className="form-control  w-50"
                               id="inputPassword3"
+                              placeholder="password"
                               required
                            />
                         </div>
