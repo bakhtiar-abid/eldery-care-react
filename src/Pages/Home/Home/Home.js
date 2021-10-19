@@ -1,7 +1,8 @@
 import React from "react";
-import Volunteer from "../../Volunteers/Volunteer";
 import Banner from "../Banner/Banner";
+import Connect from "../Connect/Connect";
 import Services from "../Services/Services";
+import Volunteer from "../Volunteers/Volunteer";
 
 const Home = () => {
    return (
@@ -9,6 +10,7 @@ const Home = () => {
          <Banner></Banner>
          <Services></Services>
          <Volunteer></Volunteer>
+         <Connect></Connect>
       </div>
    );
 };

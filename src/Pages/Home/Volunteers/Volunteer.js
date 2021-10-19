@@ -1,5 +1,5 @@
 import React from "react";
-import volunteer from "../../images/Collaboratives-sml.jpg";
+import volunteer from "../../../images/Collaboratives-sml.jpg";
 import "./Volunteer.css";
 
 const Volunteer = () => {
