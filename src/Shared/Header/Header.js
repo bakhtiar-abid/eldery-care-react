@@ -40,7 +40,7 @@ const Header = () => {
                      </Button>
                   ) : (
                      <Nav.Link as={Link} to="/login" className="text-white">
-                        Login
+                        Login/Register
                      </Nav.Link>
                   )}
                   <Navbar.Text>
