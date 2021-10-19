@@ -4,6 +4,8 @@ import Header from "./Shared/Header/Header";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./Login/Login";
 import Home from "./Pages/Home/Home/Home";
+import Footer from "./Shared/Footer/Footer";
+import NotFound from "./Pages/Home/NotFound/NotFound";
 
 function App() {
    return (
@@ -24,10 +26,11 @@ function App() {
                   {/* <PrivateRoute path="/booking/:serviceId">
                      <Booking></Booking>
                   </PrivateRoute> */}
-                  {/* <Route path="*">
+                  <Route path="*">
                      <NotFound></NotFound>
-                  </Route> */}
+                  </Route>
                </Switch>
+               <Footer></Footer>
             </Router>
          </AuthProvider>
       </div>
