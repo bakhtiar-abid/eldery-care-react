@@ -43,6 +43,8 @@ const useFirebase = () => {
       });
       return () => unsubscribed;
    }, []);
+   // return signInWithPopup(auth, googleProvider).finally(() =>
+   //          setIsLoading(false)
 
    const logOut = () => {
       setIsLoading(true);
