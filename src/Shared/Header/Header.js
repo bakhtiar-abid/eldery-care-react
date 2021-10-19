@@ -22,12 +22,8 @@ const Header = () => {
                   <Nav.Link as={HashLink} to="/home" className="text-white">
                      Home
                   </Nav.Link>
-                  <Nav.Link
-                     as={HashLink}
-                     to="/home#services"
-                     className="text-white"
-                  >
-                     Services
+                  <Nav.Link as={HashLink} to="/about" className="text-white">
+                     About Us
                   </Nav.Link>
 
                   {user?.email ? (
