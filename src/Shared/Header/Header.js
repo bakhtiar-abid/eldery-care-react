@@ -16,14 +16,10 @@ const Header = () => {
             expand="lg"
          >
             <Container>
-               <Navbar.Brand href="#home">Eldery Care</Navbar.Brand>
+               <Navbar.Brand href="/home">Eldery Care</Navbar.Brand>
                <Navbar.Toggle />
                <Navbar.Collapse className="justify-content-end">
-                  <Nav.Link
-                     as={HashLink}
-                     to="/home#home"
-                     className="text-white"
-                  >
+                  <Nav.Link as={HashLink} to="/home" className="text-white">
                      Home
                   </Nav.Link>
                   <Nav.Link

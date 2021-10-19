@@ -15,17 +15,21 @@ const useFirebase = () => {
    const [isLoading, setIsLoading] = useState(true);
 
    const auth = getAuth();
-
    const signInUsingGoogle = () => {
       setIsLoading(true);
       const googleProvider = new GoogleAuthProvider();
-
-      signInWithPopup(auth, googleProvider)
-         .then((result) => {
-            setUser(result.user);
-         })
-         .finally(() => setIsLoading(false));
+      return signInWithPopup(auth, googleProvider).finally(() =>
+         setIsLoading(false)
+      );
    };
+   // const signInUsingGoogle = () => {
+
+   //    signInWithPopup(auth, googleProvider)
+   //       .then((result) => {
+   //          setUser(result.user);
+   //       })
+   //       .finally(() => setIsLoading(false));
+   // };
 
    // observe user state change
    useEffect(() => {

@@ -4,7 +4,7 @@ import "./Volunteer.css";
 
 const Volunteer = () => {
    return (
-      <div style={{ backgroundColor: "#e7f5fc" }}>
+      <div style={{ backgroundColor: "#e7f5fc" }} className="overflow-hidden">
          <h1 className="text-center my-5 pt-3" style={{ color: "#a31987" }}>
             Meet our volunteers
          </h1>

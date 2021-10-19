@@ -3,7 +3,7 @@ import "./Banner.css";
 
 const Banner = () => {
    return (
-      <div id="home">
+      <div>
          <div className="hero-image">
             <div className="hero-text">
                <h1 style={{ fontSize: "30px" }}>Eldery Care</h1>

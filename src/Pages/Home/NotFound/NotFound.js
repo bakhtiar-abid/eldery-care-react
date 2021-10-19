@@ -1,17 +1,16 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
+
 import notFound from "../../../images/notfound.jpg";
 
 const NotFound = () => {
    return (
       <div>
          <img src={notFound} className="img-fluid w-100" alt="" />
-         <Link to="/home">
+         <a href="/home">
             <div className="text-center">
                <button className="btn btn-warning"> Go Back Home </button>
             </div>
-         </Link>
+         </a>
       </div>
    );
 };

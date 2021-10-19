@@ -3,7 +3,10 @@ import image from "../../../images/wayfinding-promo.png";
 
 const Connect = () => {
    return (
-      <div style={{ backgroundColor: "#782327" }} className="my-5">
+      <div
+         style={{ backgroundColor: "#782327" }}
+         className="my-5 overflow-hidden"
+      >
          <div className="row">
             <div className="col-lg-6 col-md-6 ">
                <h2 className="p-5 text-white">
