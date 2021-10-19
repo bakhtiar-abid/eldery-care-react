@@ -6,6 +6,8 @@ import Login from "./Login/Login";
 import Home from "./Pages/Home/Home/Home";
 import Footer from "./Shared/Footer/Footer";
 import NotFound from "./Pages/Home/NotFound/NotFound";
+import PrivateRoute from "./Login/PrivateRoute/PrivateRoute";
+import ServiceDetail from "./Pages/Home/ServiceDetail/ServiceDetail";
 
 function App() {
    return (
@@ -20,12 +22,13 @@ function App() {
                   <Route path="/home">
                      <Home></Home>
                   </Route>
+
                   <Route path="/login">
                      <Login></Login>
                   </Route>
-                  {/* <PrivateRoute path="/booking/:serviceId">
-                     <Booking></Booking>
-                  </PrivateRoute> */}
+                  <PrivateRoute path="/service/:serviceId">
+                     <ServiceDetail></ServiceDetail>
+                  </PrivateRoute>
                   <Route path="*">
                      <NotFound></NotFound>
                   </Route>
