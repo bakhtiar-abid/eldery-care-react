@@ -124,8 +124,8 @@ const Login = () => {
             <h1>Please Give Your Information First</h1>
          </div>
 
-         <div className=" my-5 ">
-            <div className="my-5 mx-5">
+         <div className=" my-5 container overflow-hidden">
+            <div className="my-5 mx-5 ">
                <form onSubmit={handleRegistration}>
                   <h3 className="text-success ">
                      Please {isLogin ? "Login" : "Register"}{" "}
