@@ -10,7 +10,7 @@ const AboutUs = () => {
          <h2 style={{ color: "#a31987" }} className="my-5 m-3">
             Providing Excellence In Health And Social Care In The Community
          </h2>
-         <p className=" m-3">
+         <p className=" m-3 my-5">
             Care Plus is an organisation working in communities across North
             East Lincolnshire. We’re a social business that provides adult
             health and social care services to people across North East

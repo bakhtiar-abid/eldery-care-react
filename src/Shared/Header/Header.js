@@ -39,12 +39,12 @@ const Header = () => {
                      </Nav.Link>
                   )}
                   <Navbar.Text>
-                     Signed in as:{" "}
+                     <span className="">Signed in as:</span>{" "}
                      <a href="#login">
                         {user?.displayName}{" "}
                         <img
-                           src={user.photoURL}
-                           className="w-25 rounded-circle ms-3"
+                           src={user?.photoURL}
+                           className="rounded-circle ms-3"
                            alt=""
                         />
                      </a>

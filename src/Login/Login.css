@@ -6,3 +6,19 @@
    background-size: cover;
    overflow: hidden;
 }
+
+.login-info {
+   background-image: url("../../src/images/Hope-Street-5-1.png");
+   background-repeat: no-repeat;
+   padding-bottom: 600px;
+   background-position: 100%;
+   background-size: cover;
+}
+
+.login-info h1 {
+   padding: 20px;
+   color: #fff;
+   font-size: 64px;
+   font-weight: 600;
+   background-color: hsla(312, 73%, 37%, 0.384);
+}
