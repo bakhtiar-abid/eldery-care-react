@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import useAuth from "../hooks/useAuth";
+
 import "./Login.css";
 import {
    getAuth,
@@ -29,6 +30,8 @@ const Login = () => {
    const handleGoogleLogin = () => {
       signInUsingGoogle().then((result) => {
          history.push(redirect_uri);
+         const user = result.user;
+         console.log(user);
       });
    };
    const toggleLogin = (e) => {
@@ -219,7 +222,7 @@ const Login = () => {
                      onClick={handleGoogleLogin}
                   >
                      {" "}
-                     Google Sign-In{" "}
+                     <i class="fab fa-google"></i> Google Sign-In{" "}
                   </button>
                </div>
             </div>
