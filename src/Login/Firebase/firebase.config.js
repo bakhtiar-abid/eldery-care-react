@@ -1,10 +1,10 @@
 const firebaseConfig = {
-   apiKey: "AIzaSyANC9jv-o327q5DwCC6VhWPSQemmfGWpao",
-   authDomain: "eldery-care.firebaseapp.com",
-   projectId: "eldery-care",
-   storageBucket: "eldery-care.appspot.com",
-   messagingSenderId: "920333759690",
-   appId: "1:920333759690:web:e0cc95afcb9cceebac3033",
+   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+   appId: process.env.REACT_APP_FIREBASE_APP_ID,
 };
 
 export default firebaseConfig;
