@@ -1,6 +1,6 @@
 # Eldery Care Services
 
-[![enter image description here](https://i.ibb.co/71TrqgG/Screenshot-1.png)](https://travelious-react.web.app/)
+[![enter image description here](https://i.ibb.co/71TrqgG/Screenshot-1.png)](https://eldery-care.web.app/)
 
 ## Functionality:
 
